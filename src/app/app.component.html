@@ -5,10 +5,24 @@
 
 </div>
 
+<!-- ng built-in-pipes -->
+<!-- <div class="demo">
+
+  <div>Start Date: {{startDate | date: 'dd/MMM/yyyy'}}</div>
+
+  <div> {{ title | titlecase }} </div>
+
+  <div> {{ price | currency: 'GBP' }} </div>
+
+  <div>Percentage: {{rate | percent }} </div>
+
+</div>
+
+{{courses | json }} -->
 
 <div class="courses">
 
-    <course-card *ngFor="let course of courses;index as i;"
+    <course-card *ngFor="let course of courses; index as i;"
       (courseSelected)="onCourseSelected($event)"
       [course]="course"
       [cardIndex]="i + 1">
